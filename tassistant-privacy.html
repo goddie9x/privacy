@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TAssistant</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        h3 { color: #34495e; }
+        .highlight {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Quay lại danh sách ứng dụng</a>
+        
+        <h1>Chính sách Quyền riêng tư (Privacy Policy)</h1>
+        <p><strong>Ứng dụng:</strong> TAssistant</p>
+        <p><strong>Ngày cập nhật:</strong> 30/04/2026</p>
+
+        <p>Hoàng Minh Tâm ("tôi", "nhà phát triển") xây dựng ứng dụng TAssistant dưới dạng một ứng dụng tiện ích và Trợ lý ảo. Dịch vụ này được cung cấp miễn phí và được thiết kế để sử dụng "nguyên trạng".</p>
+        <p>Trang này được sử dụng để thông báo cho người dùng về các chính sách của tôi liên quan đến việc thu thập, sử dụng và tiết lộ Thông tin cá nhân nếu bất kỳ ai quyết định sử dụng dịch vụ của tôi.</p>
+
+        <div class="highlight">
+            <strong>Tóm tắt quan trọng:</strong> TAssistant <strong>KHÔNG</strong> thu thập, lưu trữ, hoặc chia sẻ bất kỳ dữ liệu cá nhân nào của bạn lên máy chủ của chúng tôi. Các quá trình xử lý giọng nói và tự động hóa hầu hết diễn ra trực tiếp trên thiết bị của bạn (Offline).
+        </div>
+
+        <h2>1. Quyền Accessibility Service (Dịch vụ trợ năng)</h2>
+        <p>Ứng dụng yêu cầu quyền <strong>Accessibility Service API</strong> để thực hiện các thao tác rảnh tay cốt lõi, bao gồm:</p>
+        <ul>
+            <li>Thực hiện các lệnh hệ thống: Trở về màn hình chính (Home), Quay lại (Back), Mở đa nhiệm (Recents), và Khóa màn hình (Lock screen).</li>
+            <li>Tự động hóa việc mở các ứng dụng khác trên thiết bị theo lệnh giọng nói của bạn.</li>
+        </ul>
+        <p><strong>Cam kết bảo mật:</strong> Chúng tôi chỉ sử dụng Dịch vụ Trợ năng để thực hiện các hành động theo yêu cầu rõ ràng từ người dùng. Chúng tôi <strong>KHÔNG</strong> sử dụng quyền này để thu thập văn bản trên màn hình, đọc tin nhắn, ghi phím (keylogging) hay đánh cắp bất kỳ thông tin nhạy cảm nào.</p>
+
+        <h2>2. Quyền Ghi âm (Microphone)</h2>
+        <p>TAssistant yêu cầu quyền truy cập Micro (RECORD_AUDIO) để lắng nghe từ khóa đánh thức (Wake word) và nhận diện lệnh giọng nói của bạn.</p>
+        <ul>
+            <li><strong>Nhận diện Offline:</strong> Quá trình chuyển đổi giọng nói thành văn bản (Speech-to-Text) được xử lý <strong>hoàn toàn ngoại tuyến (offline)</strong> ngay trên thiết bị của bạn thông qua thư viện Vosk. Bản ghi âm không bao giờ được gửi, lưu trữ hoặc chia sẻ lên bất kỳ máy chủ nào.</li>
+        </ul>
+
+        <h2>3. Tích hợp AI của bên thứ ba (Mistral API)</h2>
+        <p>Ứng dụng có cung cấp tính năng trò chuyện nâng cao thông qua việc tích hợp API của Mistral AI. Tuy nhiên:</p>
+        <ul>
+            <li>Tính năng này chỉ hoạt động khi bạn <strong>tự nguyện cung cấp API Key cá nhân của bạn</strong>.</li>
+            <li>Nếu bạn sử dụng tính năng này, câu lệnh văn bản của bạn (sau khi được chuyển đổi từ giọng nói) sẽ được gửi tới máy chủ của Mistral AI để xử lý phản hồi. Xin vui lòng tham khảo <a href="https://mistral.ai/terms/privacy/" target="_blank">Chính sách Bảo mật của Mistral AI</a> để biết thêm chi tiết.</li>
+            <li>API Key của bạn chỉ được lưu trữ cục bộ (Local Storage) trên thiết bị và không bao giờ được gửi đến nhà phát triển.</li>
+        </ul>
+
+        <h2>4. Các quyền thiết bị khác</h2>
+        <p>Để trợ lý ảo có thể hỗ trợ bạn một cách tốt nhất, ứng dụng yêu cầu một số quyền hệ thống để thực hiện thay đổi theo lệnh của bạn (Chỉ khi bạn yêu cầu):</p>
+        <ul>
+            <li><strong>Sửa đổi cài đặt hệ thống (Write Settings):</strong> Để tăng/giảm độ sáng màn hình hoặc âm lượng thiết bị.</li>
+            <li><strong>Hiển thị trên ứng dụng khác (System Alert Window):</strong> Để hiển thị giao diện trợ lý ảo (Pop-up) khi bạn gọi.</li>
+            <li><strong>Bluetooth & WiFi:</strong> Để bật/tắt kết nối mạng và thiết bị ngoại vi khi bạn ra lệnh.</li>
+            <li><strong>Báo thức (Set Alarm):</strong> Để thiết lập Báo thức và Hẹn giờ.</li>
+        </ul>
+
+        <h2>5. Bảo mật dữ liệu</h2>
+        <p>Tôi coi trọng sự tin tưởng của bạn trong việc cung cấp quyền truy cập thiết bị. Vì TAssistant xử lý hầu hết các tác vụ ngoại tuyến và không có máy chủ lưu trữ dữ liệu người dùng, rủi ro rò rỉ dữ liệu cá nhân từ phía ứng dụng là không tồn tại.</p>
+
+        <h2>6. Thay đổi đối với Chính sách quyền riêng tư này</h2>
+        <p>Tôi có thể cập nhật Chính sách quyền riêng tư của chúng tôi theo thời gian. Do đó, bạn nên xem lại trang này định kỳ để biết mọi thay đổi. Tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách quyền riêng tư mới trên trang này.</p>
+
+        <h2>7. Liên hệ</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về Chính sách Quyền riêng tư của tôi, đừng ngần ngại liên hệ:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:boykeodang@gmail.com">boykeodang@gmail.com</a></li>
+            <li><strong>Nhà phát triển:</strong> Hoàng Minh Tâm</li>
+        </ul>
+    </div>
+</body>
+</html>
