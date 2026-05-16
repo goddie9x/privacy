@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách bảo mật - T-Authenticator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        p, li { color: #555; }
+        ul { padding-left: 20px; }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #3498db; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        .footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Quay lại danh sách</a>
+        <h1>Chính sách Quyền riêng tư - T-Authenticator</h1>
+        <p><em>Cập nhật lần cuối: Tháng 5 năm 2026</em></p>
+        
+        <p>Ứng dụng <strong>T-Authenticator</strong> được phát triển bởi <strong>Hoàng Minh Tâm</strong> dưới tư cách là một ứng dụng mã nguồn độc lập. Dịch vụ này được cung cấp hoàn toàn miễn phí và được thiết kế để hoạt động với tiêu chí bảo vệ quyền riêng tư tuyệt đối cho dữ liệu của người dùng.</p>
+
+        <h2>1. Thu thập và Sử dụng Thông tin</h2>
+        <p>Ứng dụng <strong>T-Authenticator không thu thập, không lưu trữ trên bất kỳ máy chủ nào và không chia sẻ</strong> bất kỳ thông tin cá nhân, dữ liệu định danh hoặc mã xác thực (OTP) nào của người dùng. Tất cả các mớ dữ liệu dịch vụ liên quan đến tài khoản 2FA đều được xử lý cục bộ và lưu trữ an toàn trong phân vùng bộ nhớ mã hóa nội bộ của thiết bị di động cá nhân của bạn.</p>
+
+        <h2>2. Quyền Truy cập trên Thiết bị</h2>
+        <p>Để vận hành các tính năng cốt lõi, ứng dụng cần một số quyền hạn cụ thể từ hệ thống, người dùng có toàn quyền kiểm soát các quyền này:</p>
+        <ul>
+            <li><strong>Máy ảnh (Camera):</strong> Chỉ được sử dụng cục bộ để quét các mã QR định dạng thiết lập 2FA. Ứng dụng không lưu lại hình ảnh hoặc truyền tải luồng video ra ngoài.</li>
+            <li><strong>Xác thực Sinh trắc học (Biometric Hardware):</strong> Sử dụng phần cứng vân tay/khuôn mặt của thiết bị để mở khóa ứng dụng (App Lock). Luồng xử lý hoàn toàn do hệ điều hành Android đảm nhận, ứng dụng không có quyền tiếp cận dữ liệu sinh trắc học gốc của bạn.</li>
+        </ul>
+
+        <h2>3. Dịch vụ Bên thứ ba & Sao lưu Dữ liệu</h2>
+        <p>Ứng dụng tích hợp tính năng sao lưu (Backup) và khôi phục (Restore) tùy chọn sử dụng nền tảng <strong>Google Drive API</strong>:</p>
+        <ul>
+            <li>Toàn bộ dữ liệu OTP trước khi tải lên đều được mã hóa bằng thuật toán đối xứng tương thích chuẩn AES-256 dựa trên Encryption Key (mật khẩu) do chính người dùng tự thiết lập và quản lý.</li>
+            <li>Dữ liệu được lưu trữ riêng biệt trong vùng thư mục ẩn ứng dụng (AppDataFolder) trên tài khoản Google Drive cá nhân của chính người dùng. Nhà phát triển hoàn toàn không có quyền tiếp cận tài khoản Google hoặc tệp tin sao lưu này của bạn.</li>
+        </ul>
+
+        <h2>4. Bảo mật Dữ liệu</h2>
+        <p>Vì dữ liệu lưu local và khóa mã hóa do bạn nắm giữ, độ an toàn của mã OTP phụ thuộc vào việc bảo mật Encryption Key của chính bạn. Nếu bạn quên mật khẩu mã hóa này, dữ liệu sao lưu trên Google Drive sẽ không thể phục hồi được dưới mọi hình thức.</p>
+
+        <h2>5. Thay đổi Chính sách Quyền riêng tư</h2>
+        <p>Chính sách này có thể được cập nhật định kỳ để phù hợp với các quy định mới của Google Play Store hoặc khi bổ sung các tính năng nâng cấp. Mọi thay đổi sẽ được cập nhật công khai trực tiếp tại trang web này.</p>
+
+        <h2>6. Liên hệ</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào về Chính sách Quyền riêng tư của T-Authenticator, vui lòng liên hệ qua địa chỉ email: <a href="mailto:boykeodang@gmail.com">boykeodang@gmail.com</a>.</p>
+
+        <div class="footer">
+            <p>&copy; 2026 Hoàng Minh Tâm. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
