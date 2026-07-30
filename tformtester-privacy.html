@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách bảo mật - T-FormTester</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1, h2 { color: #2c3e50; }
+        h1 { border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #3498db; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Quay lại danh sách ứng dụng</a>
+        
+        <h1>Chính sách Quyền riêng tư - T-FormTester</h1>
+        <p><strong>Cập nhật lần cuối:</strong> Tháng 7, 2026</p>
+
+        <h2>1. Tổng quan về thu thập và sử dụng dữ liệu</h2>
+        <p>Tiện ích mở rộng <strong>T-FormTester</strong> cam kết bảo vệ quyền riêng tư của người dùng tuyệt đối. Tiện ích <strong>KHÔNG</strong> thu thập, lưu trữ từ xa, hay chia sẻ bất kỳ thông tin cá nhân, nội dung form, hay lịch sử duyệt web nào của bạn với bất kỳ bên thứ ba nào.</p>
+
+        <h2>2. Lưu trữ dữ liệu cục bộ (Local Storage)</h2>
+        <p>Toàn bộ dữ liệu được tạo ra và sử dụng trong quá trình vận hành tiện ích đều được lưu trữ hoàn toàn cục bộ trên trình duyệt của thiết bị người dùng thông qua API <code>chrome.storage.local</code> bao gồm:</p>
+        <ul>
+            <li>Các template form người dùng tự lưu theo URL.</li>
+            <li>Các thiết lập cá nhân hóa (Chế độ Dark/Light, Ngôn ngữ hiển thị, trạng thái Auto Submit).</li>
+            <li>API Key của các nhà cung cấp AI (Mistral AI hoặc OpenAI) do người dùng tự nhập để phục vụ tính năng sinh dữ liệu điền form thông minh.</li>
+        </ul>
+
+        <h2>3. Chia sẻ dữ liệu với bên thứ ba (Dịch vụ Trí tuệ Nhân tạo)</h2>
+        <p>Khi người dùng chủ động sử dụng tính năng điền form bằng AI, tiện ích chỉ truyền tải cấu trúc các trường form (bao gồm nhãn tên trường, loại input, placeholder) thông qua API Key cá nhân của người dùng đến máy chủ của nhà cung cấp mô hình trí tuệ nhân tạo tương ứng (Mistral AI hoặc OpenAI) để nhận kết quả nội dung giả lập phù hợp. Không có bất kỳ dữ liệu cá nhân thực tế nào bị thu thập hay chia sẻ ngoài phạm vi yêu cầu này.</p>
+
+        <h2>4. Quyền hạn yêu cầu và lý do</h2>
+        <ul>
+            <li><strong>activeTab:</strong> Cho phép tiện ích quét cấu trúc DOM trên tab hiện tại một cách an toàn khi người dùng bấm tương tác nhằm tiến hành điền form.</li>
+            <li><strong>storage:</strong> Cho phép lưu trữ các thiết lập cấu hình và template form cục bộ trên thiết bị.</li>
+        </ul>
+
+        <h2>5. Liên hệ</h2>
+        <p>Mọi thắc mắc hoặc yêu cầu liên quan đến chính sách quyền riêng tư, vui lòng liên hệ qua email: <a href="mailto:boykeodang@gmail.com">boykeodang@gmail.com</a>.</p>
+    </div>
+</body>
+</html>
