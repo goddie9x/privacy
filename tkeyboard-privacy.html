@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách bảo mật - TKeyboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1, h2 { color: #2c3e50; }
+        h1 { border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #3498db; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Quay lại danh sách ứng dụng</a>
+        
+        <h1>Chính sách Quyền riêng tư - TKeyboard</h1>
+        <p><strong>Cập nhật lần cuối:</strong> Tháng 8, 2026</p>
+
+        <h2>1. Tổng quan về thu thập và bảo mật dữ liệu</h2>
+        <p>Ứng dụng bàn phím <strong>TKeyboard</strong> được thiết kế với nguyên tắc bảo vệ quyền riêng tư tuyệt đối. Ứng dụng <strong>KHÔNG</strong> chứa các công cụ theo dõi (tracking), <strong>KHÔNG</strong> ghi lại thao tác gõ phím (keylogging) và <strong>KHÔNG</strong> tự động gửi bất kỳ dữ liệu cá nhân nào của bạn lên các máy chủ từ xa.</p>
+
+        <h2>2. Lưu trữ dữ liệu cục bộ</h2>
+        <p>Mọi dữ liệu sinh ra trong quá trình sử dụng đều được mã hóa và lưu trữ an toàn ngay trên bộ nhớ nội bộ của thiết bị, bao gồm:</p>
+        <ul>
+            <li><strong>Lịch sử bảng tạm (Clipboard):</strong> Lịch sử copy văn bản và hình ảnh được lưu trữ tạm thời trong cache của bàn phím để phục vụ chức năng dán nhanh.</li>
+            <li><strong>Cài đặt tùy chỉnh:</strong> Lựa chọn theme, kích thước phím, cấu hình một tay và hình nền cá nhân.</li>
+            <li><strong>API Key:</strong> Khóa API của dịch vụ AI (Mistral, OpenAI) hoặc Giphy do người dùng cung cấp được lưu trữ riêng tư trên máy.</li>
+        </ul>
+
+        <h2>3. Truy cập Dịch vụ của Bên thứ ba</h2>
+        <p>TKeyboard tích hợp một số tính năng yêu cầu mạng lưới nhưng chỉ kích hoạt khi có sự tương tác chủ động của người dùng:</p>
+        <ul>
+            <li><strong>Tính năng Trợ lý AI:</strong> Khi bạn chọn tính năng "Tóm tắt AI", "Viết tiếp AI" hoặc "Gợi ý từ", bàn phím sẽ gửi trực tiếp đoạn văn bản ngữ cảnh cùng với API Key của bạn tới máy chủ của nhà cung cấp AI mà bạn đã cấu hình (ví dụ: Mistral AI) để lấy kết quả trả về.</li>
+            <li><strong>Tính năng tìm kiếm GIF:</strong> Khi sử dụng chế độ tìm kiếm GIF, các từ khóa tìm kiếm sẽ được gửi đến máy chủ Giphy.com để truy xuất danh sách ảnh động.</li>
+        </ul>
+        <p>Ngoài các nội dung được gửi trực tiếp theo yêu cầu tính năng trên, không có dữ liệu định danh hay nhật ký sử dụng nào khác được chia sẻ.</p>
+
+        <h2>4. Yêu cầu Quyền hạn (Permissions)</h2>
+        <p>TKeyboard yêu cầu các quyền trên Android nhằm mục đích duy nhất là cung cấp chức năng nội bộ:</p>
+        <ul>
+            <li><strong>RECORD_AUDIO:</strong> Sử dụng độc quyền cho tính năng nhập liệu bằng giọng nói. Âm thanh được xử lý qua công cụ nhận diện giọng nói mặc định của thiết bị.</li>
+            <li><strong>READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE:</strong> Chỉ sử dụng để hỗ trợ tính năng chọn hình ảnh làm hình nền bàn phím và tự động phát hiện ảnh chụp màn hình/ảnh mới lưu vào thiết bị để nạp vào giao diện Bảng tạm (Clipboard) nội bộ của phím nhằm mục đích dán nhanh.</li>
+            <li><strong>INTERNET:</strong> Cần thiết cho các kết nối đến API AI và API tìm kiếm GIF do người dùng yêu cầu.</li>
+        </ul>
+
+        <h2>5. Thay đổi Chính sách</h2>
+        <p>Chúng tôi có quyền cập nhật chính sách này bất cứ lúc nào. Mọi thay đổi sẽ được phản ánh trực tiếp trên trang này kèm theo ngày cập nhật mới nhất.</p>
+
+        <h2>6. Liên hệ</h2>
+        <p>Mọi thắc mắc, báo cáo lỗi hoặc yêu cầu hỗ trợ liên quan đến TKeyboard và quyền riêng tư, vui lòng liên hệ qua email: <a href="mailto:boykeodang@gmail.com">boykeodang@gmail.com</a>.</p>
+    </div>
+</body>
+</html>
