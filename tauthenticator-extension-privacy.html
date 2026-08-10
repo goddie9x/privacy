@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách bảo mật - TAuthenticator Extension</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #0969da; padding-bottom: 10px; margin-top: 0; }
+        h2 { color: #34495e; margin-top: 25px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .footer a { color: #0969da; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chính sách quyền riêng tư - TAuthenticator Extension</h1>
+        <p><em>Cập nhật lần cuối: Tháng 8, 2026</em></p>
+        
+        <p><strong>TAuthenticator Extension</strong> là tiện ích mở rộng trên trình duyệt hỗ trợ quản lý và sinh mã xác thực hai lớp (2FA/TOTP) bảo mật cao. Chúng tôi cam kết bảo vệ tuyệt đối quyền riêng tư và dữ liệu cá nhân của người dùng.</p>
+
+        <h2>1. Thu thập dữ liệu</h2>
+        <p>Chúng tôi <strong>KHÔNG</strong> thu thập, lưu trữ, truyền tải hoặc chia sẻ bất kỳ dữ liệu cá nhân hay mã bí mật (Secret Keys) nào của bạn tới bất kỳ máy chủ bên thứ ba nào. Toàn bộ dữ liệu tài khoản 2FA chỉ tồn tại trên trình duyệt của bạn.</p>
+
+        <h2>2. Lưu trữ và Mã hóa Dữ liệu</h2>
+        <ul>
+            <li><strong>Lưu trữ cục bộ (Local Storage):** Mọi Secret Keys và thông tin tài khoản được mã hóa bằng thuật toán <strong>AES-256-GCM</strong> kết hợp hàm dẫn xuất khóa <strong>PBKDF2</strong> thông qua Master Password do người dùng tự đặt. Dữ liệu này chỉ lưu trong <code>chrome.storage.local</code> của trình duyệt.</li>
+            <li><strong>Không gửi dữ liệu ra ngoài:** Tiện ích hoạt động 100% offline. Không có bất kỳ kết nối mạng nào được thực hiện để truyền tải Secret Keys hoặc thông tin xác thực.</li>
+        </ul>
+
+        <h2>3. Quyền hạn truy cập (Permissions)</h2>
+        <p>Tiện ích chỉ yêu cầu các quyền tối thiểu để phục vụ mục đích hoạt động duy nhất:</p>
+        <ul>
+            <li><strong>storage:** Dùng để lưu trữ dữ liệu TOTP đã được mã hóa an toàn trên trình duyệt.</li>
+            <li><strong>activeTab & scripting:** Dùng để chèn lớp phủ (overlay) hỗ trợ người dùng quét mã QR trực tiếp từ vùng chọn trên màn hình tab đang mở.</li>
+            <li><strong>contextMenus:** Dùng để thêm tùy chọn "Quét mã QR trên vùng chọn" vào menu chuột phải.</li>
+        </ul>
+
+        <h2>4. Sao lưu và Khôi phục (Backup & Restore)</h2>
+        <p>Tiện ích hỗ trợ xuất/nhập dữ liệu dưới dạng tệp tin mã hóa cục bộ (<code>.tam</code> cho extension hoặc <code>.enc</code> cho bản mobile đồng bộ). Quá trình mã hóa và giải mã tệp sao lưu diễn ra 100% tại client và yêu cầu đúng Master Password để mở.</p>
+
+        <h2>5. Thay đổi chính sách</h2>
+        <p>Chính sách quyền riêng tư này có thể được cập nhật để phản ánh các thay đổi về mặt kỹ thuật. Mọi thay đổi sẽ được cập nhật công khai tại trang này.</p>
+
+        <div class="footer">
+            <p><strong>Tác giả:</strong> Hoàng Minh Tâm<br>
+            Email liên hệ: <a href="mailto:boykeodang@gmail.com">boykeodang@gmail.com</a></p>
+            <p><a href="index.html">&larr; Quay lại danh sách ứng dụng</a></p>
+            <p>&copy; 2026 Hoàng Minh Tâm. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
