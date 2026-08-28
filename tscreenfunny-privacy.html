@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách quyền riêng tư - T Screen Funny Animation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1, h2 { color: #2c3e50; }
+        h1 { border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #3498db; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+        .highlight {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Quay lại danh sách ứng dụng</a>
+
+        <h1>Chính sách Quyền riêng tư - T Screen Funny Animation</h1>
+        <p><strong>Cập nhật lần cuối:</strong> 28/08/2026</p>
+
+        <p><strong>Hoàng Minh Tâm</strong> ("tôi", "nhà phát triển") xây dựng ứng dụng <strong>T Screen Funny Animation</strong> (còn gọi là TScreen Funny Animation) dưới dạng ứng dụng miễn phí. Dịch vụ này được cung cấp theo nguyên trạng.</p>
+        <p>Ứng dụng là một nhân vật (buddy) hoạt hình nổi trên màn hình máy tính hoặc điện thoại, có thể đi, leo, tùy chỉnh hình ảnh các bộ phận cơ thể, và chạy dạng overlay trên các cửa sổ khác.</p>
+
+        <div class="highlight">
+            <strong>Tóm tắt:</strong> Ứng dụng <strong>KHÔNG</strong> thu thập, tải lên máy chủ, hay chia sẻ dữ liệu cá nhân với bên thứ ba. Cài đặt và ảnh nhân vật tùy chỉnh được lưu hoàn toàn cục bộ trên thiết bị của bạn.
+        </div>
+
+        <h2>1. Thu thập và sử dụng thông tin</h2>
+        <p>T Screen Funny Animation hoạt động ngoại tuyến. Ứng dụng không có tài khoản người dùng, không có quảng cáo, không dùng SDK phân tích (analytics) và không gửi dữ liệu lên máy chủ của nhà phát triển.</p>
+
+        <h2>2. Dữ liệu lưu trữ cục bộ</h2>
+        <p>Các dữ liệu sau được lưu trên thiết bị (SharedPreferences / bộ nhớ ứng dụng) để ứng dụng nhớ lựa chọn của bạn:</p>
+        <ul>
+            <li>Cài đặt giao diện (sáng/tối), ngôn ngữ, số lượng buddy, tốc độ, kích thước.</li>
+            <li>Tùy chọn overlay, xuyên thấu chuột (click-through), tiết kiệm pin.</li>
+            <li>Danh sách mẫu nhân vật tùy chỉnh và đường dẫn ảnh các bộ phận (đầu, thân, tay, chân) do bạn tự chọn.</li>
+        </ul>
+        <p>Khi bạn chọn ảnh từ thư viện để gắn vào nhân vật, ứng dụng chỉ đọc tệp bạn đã chọn và có thể sao chép một bản cục bộ để dùng lại. Ảnh không được tải lên mạng.</p>
+
+        <h2>3. Quyền truy cập thiết bị (Permissions)</h2>
+        <p>Trên Android, ứng dụng yêu cầu một số quyền để buddy hiển thị trên màn hình:</p>
+        <ul>
+            <li><strong>Hiển thị trên ứng dụng khác (SYSTEM_ALERT_WINDOW):</strong> Cho phép vẽ buddy nổi phía trên các ứng dụng khác.</li>
+            <li><strong>Dịch vụ chạy nền (Foreground Service / Special Use):</strong> Giữ overlay buddy khi bạn dùng ứng dụng khác hoặc khóa màn hình.</li>
+            <li><strong>Thông báo (POST_NOTIFICATIONS):</strong> Thông báo hệ thống đi kèm dịch vụ overlay, giúp bạn biết buddy đang chạy và quản lý overlay.</li>
+            <li><strong>Wake lock:</strong> Giúp animation overlay không bị hệ thống tạm dừng không mong muốn khi đang hiển thị.</li>
+            <li><strong>Chọn ảnh (Photo Picker / thư viện):</strong> Chỉ khi bạn tự thêm ảnh cho nhân vật tùy chỉnh. Ứng dụng không quét toàn bộ thư viện.</li>
+        </ul>
+        <p>Trên Windows, ứng dụng dùng cửa sổ trong suốt, khay hệ thống (system tray) và phím tắt để hiện/ẩn buddy trên màn hình desktop. Không có quyền mạng hay thu thập dữ liệu bổ sung.</p>
+
+        <h2>4. Dữ liệu của trẻ em</h2>
+        <p>Ứng dụng không nhắm đến trẻ em dưới 13 tuổi và không thu thập thông tin nhận dạng cá nhân từ bất kỳ độ tuổi nào.</p>
+
+        <h2>5. Thay đổi chính sách</h2>
+        <p>Chính sách này có thể được cập nhật theo thời gian. Thay đổi có hiệu lực khi được đăng trên trang này. Bạn nên xem lại trang định kỳ.</p>
+
+        <h2>6. Liên hệ</h2>
+        <p>Mọi thắc mắc về chính sách quyền riêng tư, vui lòng liên hệ:</p>
+        <ul>
+            <li>Email: <a href="mailto:boykeodang@gmail.com">boykeodang@gmail.com</a></li>
+            <li>Facebook: <a href="https://www.facebook.com/goddie9x/" target="_blank">Hoàng Minh Tâm</a></li>
+        </ul>
+    </div>
+</body>
+</html>
