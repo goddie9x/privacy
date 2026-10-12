@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách bảo mật - TBlockElement</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; border-bottom: 2px solid #0969da; padding-bottom: 10px; margin-top: 0; }
+        h2 { color: #34495e; margin-top: 25px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        code { background: #f1f8ff; padding: 1px 5px; border-radius: 3px; font-size: 0.92em; }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .footer a { color: #0969da; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chính sách quyền riêng tư - TBlockElement</h1>
+        <p><em>Cập nhật lần cuối: Tháng 10, 2026</em></p>
+
+        <p><strong>TBlockElement</strong> (gọi tắt là "TBlock") là tiện ích mở rộng trên trình duyệt giúp người dùng chặn các phần tử gây khó chịu trên trang web (quảng cáo, popup, banner cookie, overlay...), quản lý danh sách chặn và xem thống kê. Chúng tôi cam kết bảo vệ quyền riêng tư của người dùng: <strong>tiện ích không thu thập, không theo dõi và không gửi bất kỳ dữ liệu cá nhân nào của bạn tới máy chủ của chúng tôi</strong> — đơn giản vì chúng tôi không vận hành bất kỳ máy chủ thu thập dữ liệu nào.</p>
+
+        <h2>1. Thu thập dữ liệu</h2>
+        <p>TBlock <strong>KHÔNG</strong> thu thập dữ liệu cá nhân. Cụ thể:</p>
+        <ul>
+            <li>Không có phân tích hành vi (analytics), không theo dõi người dùng (tracking), không quảng cáo.</li>
+            <li>Không ghi lại lịch sử duyệt web của bạn, không đọc nội dung trang bạn xem.</li>
+            <li>Không tạo tài khoản, không yêu cầu đăng nhập, không định danh người dùng.</li>
+        </ul>
+
+        <h2>2. Dữ liệu được lưu trữ (chỉ trên thiết bị của bạn)</h2>
+        <p>Mọi dữ liệu của TBlock chỉ được lưu trong <code>chrome.storage</code> trên trình duyệt của bạn, bao gồm:</p>
+        <ul>
+            <li><strong>Rules chặn:</strong> selectors, host áp dụng, ngày tạo, ghi chú, nhóm, trạng thái bật/tắt.</li>
+            <li><strong>Cài đặt:</strong> tùy chọn chặn nhanh, ngoại lệ, gói annoyances, chế độ Focus, YouTube, PIN khóa options (lưu dạng mã băm SHA-256, không lưu PIN gốc).</li>
+            <li><strong>Thống kê:</strong> số lượng phần tử đã chặn (theo rule / theo trang).</li>
+            <li><strong>Sao lưu:</strong> bản backup JSON, danh sách filter đã đăng ký (URL do bạn tự thêm).</li>
+        </ul>
+        <p>Dữ liệu này <strong>không bao giờ rời khỏi thiết bị của bạn</strong>, trừ hai trường hợp do chính bạn chủ động kích hoạt (mục 4).</p>
+
+        <h2>3. Quyền truy cập (Permissions) và mục đích sử dụng</h2>
+        <p>Tiện ích yêu cầu các quyền sau, tất cả đều phục vụ trực tiếp tính năng chặn:</p>
+        <ul>
+            <li><strong>storage, unlimitedStorage:</strong> lưu rules, cài đặt và thống kê trên trình duyệt.</li>
+            <li><strong>declarativeNetRequest, declarativeNetRequestWithHostAccess:</strong> chặn request quảng cáo/popup ở tầng mạng theo rules bạn tạo.</li>
+            <li><strong>tabs, webNavigation:</strong> nhận biết tab/frame hiện tại để áp dụng đúng rules, hỗ trợ chọn element trong iframe.</li>
+            <li><strong>contextMenus:</strong> thêm menu chuột phải "chặn phần tử".</li>
+            <li><strong>alarms:</strong> tự động làm mới filter lists, backup định kỳ, hết hạn tạm dừng/Focus mode.</li>
+            <li><strong>identity:</strong> chỉ dùng khi bạn bấm sao lưu lên Google Drive (đăng nhập OAuth).</li>
+            <li><strong>&lt;all_urls&gt; (host permission):</strong> cần thiết để content script có thể chọn và ẩn phần tử trên bất kỳ trang web nào bạn muốn chặn.</li>
+        </ul>
+
+        <h2>4. Kết nối mạng (chỉ khi bạn yêu cầu)</h2>
+        <p>TBlock không tự ý gửi dữ liệu của bạn đi đâu. Các kết nối mạng duy nhất, đều do bạn chủ động bật:</p>
+        <ul>
+            <li><strong>Filter lists:</strong> nếu bạn đăng ký URL filter list, tiện ích sẽ tải nội dung từ đúng URL đó để cập nhật rules. Chúng tôi không kiểm soát và không nhận dữ liệu từ các URL này.</li>
+            <li><strong>Sao lưu Google Drive:</strong> khi bạn bấm "Sao lưu lên Drive", file backup JSON được tải lên <strong>tài khoản Google Drive của chính bạn</strong> qua OAuth (quyền <code>drive.file</code> — chỉ file do TBlock tạo). Chúng tôi không truy cập, không đọc và không lưu trữ file này.</li>
+        </ul>
+
+        <h2>5. Quyền kiểm soát và xóa dữ liệu của bạn</h2>
+        <ul>
+            <li>Bạn có thể xem, sửa, xóa từng rule, khôi phục rule đã xóa (thùng rác 30 ngày), xuất/nhập toàn bộ dữ liệu bất cứ lúc nào trong trang Options.</li>
+            <li>Gỡ cài đặt tiện ích sẽ xóa toàn bộ dữ liệu TBlock khỏi trình duyệt.</li>
+        </ul>
+
+        <h2>6. Thay đổi chính sách</h2>
+        <p>Chính sách này có thể được cập nhật khi tiện ích có thay đổi về mặt kỹ thuật. Mọi thay đổi sẽ được công bố công khai tại trang này với ngày cập nhật mới.</p>
+
+        <div class="footer">
+            <p><strong>Tác giả:</strong> Hoàng Minh Tâm<br>
+            Email liên hệ: <a href="mailto:boykeodang@gmail.com">boykeodang@gmail.com</a></p>
+            <p><a href="index.html">&larr; Quay lại danh sách ứng dụng</a></p>
+            <p>&copy; 2026 Hoàng Minh Tâm. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
